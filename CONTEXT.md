@@ -11,6 +11,7 @@ Para una reconocida marca de ropa con sede en Francia quiere un prototipo visual
 
 ## Alcance actual
 - Pagina principal en [index.html](index.html).
+- Pagina de catalogo en [catalogue/index.html](catalogue/index.html).
 - Componentes reutilizables en [shared/layout.js](shared/layout.js).
 
 ## Criterios de calidad

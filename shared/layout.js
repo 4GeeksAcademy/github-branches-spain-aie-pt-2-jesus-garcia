@@ -8,7 +8,7 @@
 
   const links = [
     { href: `${root}index.html`, key: "home", label: "Home" },
-    { href: `${root}catalogo/index.html`, key: "catalogo", label: "Catalogo" },
+    { href: `${root}catalogue/`, key: "catalogue", label: "Catalogo" },
     { href: `${root}producto/index.html`, key: "producto", label: "Producto" },
     { href: `${root}carrito/index.html`, key: "carrito", label: "Carrito" },
     { href: `${root}checkout/index.html`, key: "checkout", label: "Checkout" }
@@ -53,7 +53,7 @@
           <section>
             <h2 class="text-sm font-bold uppercase tracking-wide text-rose-900">Explorar</h2>
             <ul class="mt-3 space-y-2 text-sm text-rose-800/80">
-              <li><a class="hover:text-rose-600" href="${root}catalogo/index.html">Catalogo</a></li>
+              <li><a class="hover:text-rose-600" href="${root}catalogue/">Catalogo</a></li>
               <li><a class="hover:text-rose-600" href="${root}producto/index.html">Producto</a></li>
               <li><a class="hover:text-rose-600" href="${root}carrito/index.html">Carrito</a></li>
             </ul>
