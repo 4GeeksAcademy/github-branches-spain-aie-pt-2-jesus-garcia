@@ -9,6 +9,7 @@
       content="Vista completa del carrito con listado de productos, resumen de importes y accion de compra."
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/miyagi.js"></script>
   </head>
   <body class="min-h-screen bg-rose-50 text-rose-950 antialiased">
     <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_12%_10%,rgba(251,207,232,0.46),transparent_32%),radial-gradient(circle_at_88%_8%,rgba(186,230,253,0.35),transparent_28%),linear-gradient(to_bottom,rgba(255,255,255,0.75),rgba(255,255,255,0.94))]"></div>
@@ -168,11 +169,22 @@
           </dl>
 
           <button
+            id="buy-button"
             type="button"
             class="mt-7 w-full rounded-2xl bg-rose-300 px-5 py-3 text-sm font-black uppercase tracking-[0.08em] text-rose-900 transition hover:bg-rose-200"
           >
             Comprar
           </button>
+
+          <div id="checkout-loading" class="mt-4 hidden items-center justify-center gap-2" aria-live="polite">
+            <l-miyagi
+              size="35"
+              stroke="3.5"
+              speed="0.9"
+              color="black" 
+            ></l-miyagi>
+            <span class="text-xs font-semibold uppercase tracking-[0.12em] text-rose-700">Redirigiendo al checkout...</span>
+          </div>
 
           <a
             href="../catalogue/"
