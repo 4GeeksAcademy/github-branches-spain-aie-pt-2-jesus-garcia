@@ -1,10 +1,13 @@
 (function () {
   const path = window.location.pathname;
   const cleanPath = path.replace(/\/index\.html$/, "/");
-  const depth = cleanPath.split("/").filter(Boolean).length;
-  const root = "../".repeat(depth);
+  const segments = cleanPath.split("/").filter(Boolean);
+  const appSections = new Set(["catalogue", "product", "cart", "checkout"]);
+  const hasProjectBase = segments.length > 0 && !appSections.has(segments[0]);
 
-  const section = cleanPath.split("/").filter(Boolean)[0] || "home";
+  const contentDepth = hasProjectBase ? Math.max(0, segments.length - 1) : segments.length;
+  const root = contentDepth === 0 ? "" : "../".repeat(contentDepth);
+  const section = contentDepth === 0 ? "home" : segments[segments.length - 1];
 
   const links = [
     { href: `${root}`, key: "home", label: "Home" },
