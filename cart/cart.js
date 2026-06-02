@@ -4,6 +4,8 @@
   const subtotalEl = document.getElementById("subtotal");
   const taxesEl = document.getElementById("taxes");
   const totalEl = document.getElementById("grand-total");
+  const buyButton = document.getElementById("buy-button");
+  const checkoutLoading = document.getElementById("checkout-loading");
 
   const formatCurrency = (value) => `EUR ${value.toFixed(2)}`;
 
@@ -49,6 +51,27 @@
     input.addEventListener("input", updateTotals);
     input.addEventListener("change", updateTotals);
   });
+
+  const purchase = () => {
+    if (buyButton) {
+      buyButton.disabled = true;
+      buyButton.textContent = "Procesando...";
+      buyButton.classList.add("cursor-not-allowed", "opacity-70");
+    }
+
+    if (checkoutLoading) {
+      checkoutLoading.classList.remove("hidden");
+      checkoutLoading.classList.add("flex");
+    }
+
+    window.setTimeout(() => {
+      window.location.href = "../checkout/";
+    }, 1200);
+  };
+
+  if (buyButton) {
+    buyButton.addEventListener("click", purchase);
+  }
 
   updateTotals();
 })();

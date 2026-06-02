@@ -7,11 +7,11 @@
   const section = cleanPath.split("/").filter(Boolean)[0] || "home";
 
   const links = [
-    { href: `${root}index.html`, key: "home", label: "Home" },
+    { href: `${root}`, key: "home", label: "Home" },
     { href: `${root}catalogue/`, key: "catalogue", label: "Catalogo" },
     { href: `${root}product/`, key: "product", label: "Producto" },
     { href: `${root}cart/`, key: "cart", label: "Carrito" },
-    { href: `${root}checkout/index.html`, key: "checkout", label: "Checkout" }
+    { href: `${root}checkout/`, key: "checkout", label: "Checkout" }
   ];
 
   const navLinks = links
@@ -34,7 +34,7 @@
     headerSlot.innerHTML = `
       <header class="sticky top-0 z-30 border-b border-rose-200/70 bg-rose-50/90 backdrop-blur">
         <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
-          <a href="${root}index.html" class="text-xl font-black tracking-tight text-rose-900">Maison Lumiere Paris</a>
+          <a href="${root}" class="text-xl font-black tracking-tight text-rose-900">Maison Lumiere Paris</a>
           <nav aria-label="Navegacion principal" class="flex flex-wrap justify-end gap-2">${navLinks}</nav>
         </div>
       </header>
@@ -61,7 +61,7 @@
           <section>
             <h2 class="text-sm font-bold uppercase tracking-wide text-rose-900">Maison</h2>
             <ul class="mt-3 space-y-2 text-sm text-rose-800/80">
-              <li><a class="hover:text-rose-600" href="${root}checkout/index.html">Pedidos</a></li>
+              <li><a class="hover:text-rose-600" href="${root}checkout/">Pedidos</a></li>
               <li><a class="hover:text-rose-600" href="#">Envios internacionales</a></li>
               <li><a class="hover:text-rose-600" href="#">Atencion al cliente</a></li>
             </ul>
