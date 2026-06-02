@@ -10,7 +10,7 @@
     { href: `${root}index.html`, key: "home", label: "Home" },
     { href: `${root}catalogue/`, key: "catalogue", label: "Catalogo" },
     { href: `${root}product/`, key: "product", label: "Producto" },
-    { href: `${root}carrito/index.html`, key: "carrito", label: "Carrito" },
+    { href: `${root}cart/`, key: "cart", label: "Carrito" },
     { href: `${root}checkout/index.html`, key: "checkout", label: "Checkout" }
   ];
 
@@ -55,7 +55,7 @@
             <ul class="mt-3 space-y-2 text-sm text-rose-800/80">
               <li><a class="hover:text-rose-600" href="${root}catalogue/">Catalogo</a></li>
               <li><a class="hover:text-rose-600" href="${root}product/">Producto</a></li>
-              <li><a class="hover:text-rose-600" href="${root}carrito/index.html">Carrito</a></li>
+              <li><a class="hover:text-rose-600" href="${root}cart/">Carrito</a></li>
             </ul>
           </section>
           <section>
