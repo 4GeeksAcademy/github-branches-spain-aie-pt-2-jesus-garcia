@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="es" itemscope itemtype="https://schema.org/ShoppingCart">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maison Lumiere Paris | Carrito</title>
+    <meta
+      name="description"
+      content="Vista completa del carrito con listado de productos, resumen de importes y accion de compra."
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="min-h-screen bg-rose-50 text-rose-950 antialiased">
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_12%_10%,rgba(251,207,232,0.46),transparent_32%),radial-gradient(circle_at_88%_8%,rgba(186,230,253,0.35),transparent_28%),linear-gradient(to_bottom,rgba(255,255,255,0.75),rgba(255,255,255,0.94))]"></div>
+
+    <div data-site-header></div>
+
+    <main class="mx-auto max-w-7xl px-4 pb-14 pt-10 sm:px-6 lg:px-8" itemprop="mainContentOfPage">
+      <header class="mb-7">
+        <p class="inline-flex rounded-full border border-rose-300/60 bg-rose-100 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-rose-700">
+          Checkout listo para conversion
+        </p>
+        <h1 class="mt-4 text-3xl font-black tracking-tight sm:text-4xl">Carrito de compras</h1>
+        <p class="mt-3 max-w-3xl text-sm text-rose-900/75 sm:text-base">
+          Revisa tus productos antes de pagar. Modifica cantidades para ver el comportamiento del resumen en tiempo real.
+        </p>
+      </header>
+
+      <section class="grid gap-6 lg:grid-cols-[1.45fr_0.85fr] lg:items-start" aria-label="Contenido del carrito">
+        <article class="overflow-hidden rounded-3xl border border-rose-200 bg-white/90 shadow-sm shadow-rose-200/60">
+          <h2 class="border-b border-rose-100 px-5 py-4 text-lg font-bold tracking-tight text-rose-900 sm:px-6">Productos en el carrito</h2>
+
+          <div class="hidden grid-cols-[1.5fr_0.75fr_0.7fr_0.8fr] gap-4 border-b border-rose-100 bg-rose-50/80 px-5 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-rose-700 sm:grid sm:px-6">
+            <p>Producto</p>
+            <p class="text-right">Precio unitario</p>
+            <p class="text-center">Cantidad</p>
+            <p class="text-right">Total linea</p>
+          </div>
+
+          <ul id="cart-list" class="divide-y divide-rose-100" aria-live="polite">
+            <li
+              class="grid gap-4 px-5 py-4 sm:grid-cols-[1.5fr_0.75fr_0.7fr_0.8fr] sm:items-center sm:px-6"
+              data-price="169"
+            >
+              <div class="flex items-center gap-3">
+                <div class="h-18 w-16 shrink-0 overflow-hidden rounded-xl border border-rose-200 bg-[linear-gradient(145deg,#fff1f2,#ffffff)]">
+                  <img
+                    src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=240&q=80"
+                    alt="Seine Leather Sneaker en color marfil"
+                    class="h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <div>
+                  <p class="text-xs font-semibold uppercase tracking-[0.16em] text-rose-700">Calzado</p>
+                  <h3 class="mt-1 text-sm font-bold text-rose-950">Seine Leather Sneaker</h3>
+                  <p class="mt-1 text-xs text-rose-900/70">Piel suave y suela flexible.</p>
+                </div>
+              </div>
+
+              <p class="text-right text-sm font-semibold text-rose-800">EUR 169.00</p>
+
+              <div class="flex justify-center">
+                <label class="sr-only" for="qty-1">Cantidad de Seine Leather Sneaker</label>
+                <input
+                  id="qty-1"
+                  type="number"
+                  min="1"
+                  value="1"
+                  class="qty-input w-20 rounded-xl border border-rose-200 bg-white px-3 py-2 text-center text-sm font-semibold text-rose-900 outline-none transition focus:border-rose-400"
+                />
+              </div>
+
+              <p class="line-total text-right text-sm font-black text-rose-900">EUR 169.00</p>
+            </li>
+
+            <li
+              class="grid gap-4 px-5 py-4 sm:grid-cols-[1.5fr_0.75fr_0.7fr_0.8fr] sm:items-center sm:px-6"
+              data-price="145"
+            >
+              <div class="flex items-center gap-3">
+                <div class="h-18 w-16 shrink-0 overflow-hidden rounded-xl border border-sky-200 bg-[linear-gradient(145deg,#f0f9ff,#ffffff)]">
+                  <img
+                    src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=240&q=80"
+                    alt="Marais Mini Tote en piel negra"
+                    class="h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <div>
+                  <p class="text-xs font-semibold uppercase tracking-[0.16em] text-sky-700">Bolsos</p>
+                  <h3 class="mt-1 text-sm font-bold text-rose-950">Marais Mini Tote</h3>
+                  <p class="mt-1 text-xs text-rose-900/70">Formato compacto con herrajes satinados.</p>
+                </div>
+              </div>
+
+              <p class="text-right text-sm font-semibold text-rose-800">EUR 145.00</p>
+
+              <div class="flex justify-center">
+                <label class="sr-only" for="qty-2">Cantidad de Marais Mini Tote</label>
+                <input
+                  id="qty-2"
+                  type="number"
+                  min="1"
+                  value="2"
+                  class="qty-input w-20 rounded-xl border border-rose-200 bg-white px-3 py-2 text-center text-sm font-semibold text-rose-900 outline-none transition focus:border-rose-400"
+                />
+              </div>
+
+              <p class="line-total text-right text-sm font-black text-rose-900">EUR 290.00</p>
+            </li>
+
+            <li
+              class="grid gap-4 px-5 py-4 sm:grid-cols-[1.5fr_0.75fr_0.7fr_0.8fr] sm:items-center sm:px-6"
+              data-price="79"
+            >
+              <div class="flex items-center gap-3">
+                <div class="h-18 w-16 shrink-0 overflow-hidden rounded-xl border border-violet-200 bg-[linear-gradient(145deg,#f5f3ff,#ffffff)]">
+                  <img
+                    src="https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?auto=format&fit=crop&w=240&q=80"
+                    alt="Rivoli Silk Scarf de seda estampada"
+                    class="h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <div>
+                  <p class="text-xs font-semibold uppercase tracking-[0.16em] text-violet-700">Accesorios</p>
+                  <h3 class="mt-1 text-sm font-bold text-rose-950">Rivoli Silk Scarf</h3>
+                  <p class="mt-1 text-xs text-rose-900/70">Seda estampada en tonos pastel.</p>
+                </div>
+              </div>
+
+              <p class="text-right text-sm font-semibold text-rose-800">EUR 79.00</p>
+
+              <div class="flex justify-center">
+                <label class="sr-only" for="qty-3">Cantidad de Rivoli Silk Scarf</label>
+                <input
+                  id="qty-3"
+                  type="number"
+                  min="1"
+                  value="1"
+                  class="qty-input w-20 rounded-xl border border-rose-200 bg-white px-3 py-2 text-center text-sm font-semibold text-rose-900 outline-none transition focus:border-rose-400"
+                />
+              </div>
+
+              <p class="line-total text-right text-sm font-black text-rose-900">EUR 79.00</p>
+            </li>
+          </ul>
+        </article>
+
+        <aside class="rounded-3xl border border-rose-200 bg-white/90 p-5 shadow-sm shadow-rose-200/60 sm:p-6" aria-label="Resumen de compra">
+          <h2 class="text-xl font-black tracking-tight">Resumen</h2>
+          <p class="mt-2 text-sm text-rose-900/75">Impuestos calculados al 21% para previsualizar el total final.</p>
+
+          <dl class="mt-6 space-y-3 text-sm">
+            <div class="flex items-center justify-between border-b border-rose-100 pb-2">
+              <dt class="font-semibold text-rose-700">Subtotal</dt>
+              <dd id="subtotal" class="font-semibold text-rose-900">EUR 538.00</dd>
+            </div>
+            <div class="flex items-center justify-between border-b border-rose-100 pb-2">
+              <dt class="font-semibold text-rose-700">Impuestos (21%)</dt>
+              <dd id="taxes" class="font-semibold text-rose-900">EUR 112.98</dd>
+            </div>
+            <div class="flex items-center justify-between pt-1 text-base">
+              <dt class="font-black uppercase tracking-[0.08em] text-rose-900">Total</dt>
+              <dd id="grand-total" class="text-xl font-black text-rose-800">EUR 650.98</dd>
+            </div>
+          </dl>
+
+          <button
+            type="button"
+            class="mt-7 w-full rounded-2xl bg-rose-300 px-5 py-3 text-sm font-black uppercase tracking-[0.08em] text-rose-900 transition hover:bg-rose-200"
+          >
+            Comprar
+          </button>
+
+          <a
+            href="../catalogue/"
+            class="mt-3 block text-center text-sm font-semibold text-rose-700 transition hover:text-rose-600"
+          >
+            Seguir comprando
+          </a>
+        </aside>
+      </section>
+    </main>
+
+    <div data-site-footer></div>
+
+    <script src="../shared/layout.js"></script>
+    <script src="./cart.js"></script>
+  </body>
+</html>
